@@ -6,6 +6,7 @@
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
+  line-height: 1.5;
 }
 @font-face {
   font-family: "OpenSans-Bold";
@@ -15,20 +16,25 @@
   font-display: swap;
 }
 
+
 :root {
   /* TODO: Add the licensed web-font source above these rules, if used. */
   --font-body: "OpenSans", "Tahoma", sans-serif;
   --font-display: "OpenSans-Bold", "Verdana", sans-serif;
   --step--1: .875rem;
-  --step-0: 1rem;
-  --step-1: 1.25rem;
+  --step-0: clamp(0.5rem, 1rem, 2rem);
+  --step-1: clamp(1rem, 1.25rem, 2.5rem);
   --step-2: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
   --step-3: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
   --leading-body: 1.6;
+  --leading-heading: 1.15; 
   --measure: 68ch;
+  --main-measure: 70rem;
+  --h1-measure: 16ch;
   --color-text: #404040;
   --color-action: #8c1d40;
   --color-accent: #ffc627;
+  font-size-adjust: 0.535;
 }
 * { 
   box-sizing: border-box; 
@@ -38,8 +44,7 @@ body {
   color: var(--color-text); 
   font-family: var(--font-body); 
   font-size: var(--step-0); 
-  line-height: 
-  var(--leading-body); 
+  line-height: var(--leading-body);
 }
 header { 
   padding: clamp(1.5rem, 5vw, 4rem); 
@@ -57,10 +62,10 @@ header {
 }
 h1, h2, h3 { 
   font-family: var(--font-display); 
-  line-height: 1.15; 
+  line-height: var(--leading-heading); 
 }
 h1 { 
-  max-width: 16ch; 
+  max-width: var(--h1-measure); 
   margin: 0; 
   font-size: var(--step-3); 
 }
@@ -78,7 +83,7 @@ main {
   display: grid; 
   gap: 1rem; 
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); 
-  max-width: 70rem; 
+  max-width: var(--main-measure); 
   margin: 2rem auto; 
   padding: 0 1rem; 
 }
