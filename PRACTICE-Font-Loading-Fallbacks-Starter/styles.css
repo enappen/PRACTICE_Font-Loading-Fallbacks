@@ -1,7 +1,18 @@
+/* Opens Sans is created by Steve Matteson and licensed under the Open Font License. */
+/* Licensing Information: https://openfontlicense.org/ */
+@font-face {
+  font-family: "Open Sans";
+  src: url(WOFF2-Font-Files/OpenSans-Regular.woff2) format(woff2);
+  src: url(WOFF2-Font-Files/OpenSans-Italic.woff2) format(woff2);
+  font-weight: regular;
+  font-style: none;
+  font-display: swap;
+}
+
 :root {
   /* TODO: Add the licensed web-font source above these rules, if used. */
-  --font-body: Arial, Helvetica, sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Open Sans", "Tahoma", sans-serif;
+  --font-display: "Verdana", "Trebuchet MS", sans-serif;
   --step--1: .875rem;
   --step-0: 1rem;
   --step-1: 1.25rem;
