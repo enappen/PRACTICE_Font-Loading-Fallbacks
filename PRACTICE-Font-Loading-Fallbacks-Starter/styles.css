@@ -3,9 +3,8 @@
 @font-face {
   font-family: "Open Sans";
   src: url(WOFF2-Font-Files/OpenSans-Regular.woff2) format(woff2);
-  src: url(WOFF2-Font-Files/OpenSans-Italic.woff2) format(woff2);
-  font-weight: regular;
-  font-style: none;
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
